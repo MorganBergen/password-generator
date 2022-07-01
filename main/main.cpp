@@ -16,7 +16,7 @@
 
 void prompts();
 
-int main(){
+int main() {
 	
 	int minAmount, maxAmount, upperAmount, lowerAmount, numAmount, uniqueAmount;
 	std::random_device random;
@@ -41,13 +41,13 @@ int main(){
 	std::cin >> minAmount;
 	std::cout << "\nMAXIMUM LENGTH: ";
 	std::cin >> maxAmount;
-	std::cout << "\nAMOUNT OF NATURAL NUMBERS: ";
+	std::cout << "\nTOTAL NUMBERS: ";
 	std::cin >> numAmount;
-	std::cout << "\nAMOUNT OF LOWERCASE LETTERS: ";
+	std::cout << "\nTOTAL LOWERCASE LETTERS: ";
 	std::cin >> lowerAmount;
-	std::cout << "\nnAMOUNT OF UPPERCASE LETTERS: ";
+	std::cout << "\nTOTAL UPPERCASE LETTERS: ";
 	std::cin >> upperAmount;
-	std::cout << "\nAMOUNT OF UNIQUE CHARACTERS: ";
+	std::cout << "\nTOTAL UNIQUE LETTERS: ";
 	std::cin >> uniqueAmount;
 	
 	//randomally select a total number of characters from each category
@@ -60,78 +60,51 @@ int main(){
 	std::string uniqueFinal[uniqueAmount];
 	std::string password = "";
 	
-	//NUMBERS........................................................................................................................................
+	std::cout << "\n\npassword:" << std::endl;
+	
+	//NUMBERS......................................................................................................................................
 	for (int i = 0; i < numAmount; i++) {
 		numbersFinal[i] = numbersArr[numberDis(generator)];
-		std::cout << numbersFinal[i] << ' ';
-		
-		// if numAmount is right before the last iteration
-		/*
-		 
-		 if we have numAmount = 5
-		 
-		 */
-		
+		std::cout << numbersFinal[i];
+		if (i == numAmount - 1){
+			std::cout << '-';
+		}
 	}
-	std::cout << '\n';
-	//LOWERCASE........................................................................................................................................
-	for (int i = 0 ; i < lowerAmount; i++){
-		lowercaseFinal[i] = lowercaseArr[lowerDis(generator)];
-		std::cout << lowercaseFinal[i] << ' ';
-	}
-	std::cout << '\n';
-	//UPPERCASE........................................................................................................................................
-	for (int i = 0; i < upperAmount; i++) {
-		uppercaseFinal[i] = uppercaseArr[upperDis(generator)];
-		std::cout << uppercaseFinal[i] << ' ';
-	}
-	std::cout << '\n';
 	//UNQIUE........................................................................................................................................
 	for (int i = 0 ; i < uniqueAmount; i++){
 		uniqueFinal[i] = uniqueArr[uniqueDis(generator)];
-		std::cout << uniqueFinal[i] << ' ';
+		std::cout << uniqueFinal[i];
+		if (i == uniqueAmount - 1){
+			std::cout << '-';
+		}
 	}
-	
-	std::cout << password << std::endl;
-	
-	
-	int X[] = { 1, 2, 3 };
-	int Y[] = { 4, 5, 6 };
-	
-	int m = sizeof(X)/sizeof(X[0]);
-	int n = sizeof(Y)/sizeof(Y[0]);
-	
-	int arr[m + n];
-	std::copy(X, X + m, arr);
-	std::copy(Y, Y + n, arr + m);
-	
-	// or, use
-	// std::copy(Y, Y + n, std::copy(X, X + m, arr));
-	
-	std::string final_var;
-	
-	for (int i = 0; i < m + n; i++) {
-//		std::cout << arr[i] << ' ';
-		std::string final_var = "hello";
+	//LOWERCASE....................................................................................................................................
+	for (int i = 0 ; i < lowerAmount; i++){
+		lowercaseFinal[i] = lowercaseArr[lowerDis(generator)];
+		std::cout << lowercaseFinal[i];
+		if (i == lowerAmount - 1){
+			std::cout << '-';
+		}
 	}
+	//UPPERCASE....................................................................................................................................
+	for (int i = 0; i < upperAmount; i++) {
+		uppercaseFinal[i] = uppercaseArr[upperDis(generator)];
+		std::cout << uppercaseFinal[i];
+		if (i == upperAmount - 1){
+			std::cout << '-';
+		}
 	
-	std::cout << final_var << std::endl;
-	
-//	int a = sizeof(numbersFinal)/sizeof(numbersFinal[0]);
-//	int a = sizeof(numbersFinal)/sizeof(numbersFinal[0]);
-//	int a = sizeof(numbersFinal)/sizeof(numbersFinal[0]);
-//	int a = sizeof(numbersFinal)/sizeof(numbersFinal[0]);
-	
-	
-	//HOW THE HELL DO I CONCATINATE
-	
+		std::cout << "\n\n\n" << std::endl;
 	
 	
-	return(0);
+	
+		return(0);
+}
+
 }
 
 
-void prompts(){
+void prompts() {
 	
 	std::cout << "\nWELCOME TO THE PASSWORD GENERATOR";
 	std::cout << "\n‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾";
@@ -145,9 +118,6 @@ void prompts(){
 	std::cout << "\n\nPASSWORD CRITERIA\n‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾";
 	
 }
-
-
-
 
 /*
  
