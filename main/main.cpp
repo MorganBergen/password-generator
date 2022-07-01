@@ -18,7 +18,7 @@ void prompts();
 
 int main() {
 	
-	int minAmount, maxAmount, upperAmount, lowerAmount, numAmount, uniqueAmount;
+	int upperAmount, lowerAmount, numAmount, uniqueAmount;
 	std::random_device random;
 	std::mt19937 generator(random());
 	std::uniform_int_distribution<int>numberDis(0,9);
@@ -36,11 +36,7 @@ int main() {
 		"/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"};
 	
 	prompts();
-	
-	std::cout << "\nMINIMUM LENGTH: ";
-	std::cin >> minAmount;
-	std::cout << "\nMAXIMUM LENGTH: ";
-	std::cin >> maxAmount;
+
 	std::cout << "\nTOTAL NUMBERS: ";
 	std::cin >> numAmount;
 	std::cout << "\nTOTAL LOWERCASE LETTERS: ";
@@ -49,6 +45,8 @@ int main() {
 	std::cin >> upperAmount;
 	std::cout << "\nTOTAL UNIQUE LETTERS: ";
 	std::cin >> uniqueAmount;
+	
+//	passLength = numAmount + lowerAmount + upperAmount + uniqueAmount;
 	
 	//randomally select a total number of characters from each category
 	//then fill them into one array
@@ -60,7 +58,7 @@ int main() {
 	std::string uniqueFinal[uniqueAmount];
 	std::string password = "";
 	
-	std::cout << "\n\npassword:" << std::endl;
+	std::cout << "\n\nPASSWORD\n‾‾‾‾‾‾‾‾\n";
 	
 	//NUMBERS......................................................................................................................................
 	for (int i = 0; i < numAmount; i++) {
@@ -94,8 +92,6 @@ int main() {
 			std::cout << '-';
 		}
 	
-		std::cout << "\n\n\n" << std::endl;
-	
 	
 	
 		return(0);
@@ -111,11 +107,11 @@ void prompts() {
 	std::cout << "\nTHIS PROGRAM WILL GENERATE A PSEUDO RANDOMALLY GENERATED PASSWORD BASED ON A CRITERIA YOU SET.";
 	std::cout << "\nTHE FOLLOWING IS THE ASCII STANDARD VALUE CHARACTER SET, WITH WHICH YOUR PASSWORD WILL DERIVE FROM.";
 	std::cout << "\n\nCHARACTER SET\n‾‾‾‾‾‾‾‾‾‾‾‾‾\n";
-	std::cout << "NATURAL NUMBERS:      0 1 2 3 4 5 6 7 8 9\n\n";
-	std::cout << "LOWERCASE LETTERS:    a b c d e f g h i j k l m n o p q r s t u v w x y z\n\n";
-	std::cout << "UPPERCASE LETTERS:    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\n";
-	std::cout << "SPECIAL CHARACTERS:   ! \" # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \\ ] ^ _ ` { | } ~";
-	std::cout << "\n\nPASSWORD CRITERIA\n‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾";
+	std::cout << "NATURAL NUMBERS\n0 1 2 3 4 5 6 7 8 9\n\n";
+	std::cout << "LOWERCASE LETTER\na b c d e f g h i j k l m n o p q r s t u v w x y z\n\n";
+	std::cout << "UPPERCASE LETTERS\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\n";
+	std::cout << "SPECIAL CHARACTERS\n! \" # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \\ ] ^ _ ` { | } ~";
+	std::cout << "\n\nCRITERIA\n‾‾‾‾‾‾‾‾";
 	
 }
 
@@ -124,7 +120,6 @@ void prompts() {
  sogmas-pokqyf-wexWy6
  
  Password Generator
- 
  ! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~
  
  Natural Numbers
