@@ -16,25 +16,26 @@
 
 void prompts();
 
-int main() {
-	
+int main()
+{
+
 	int upperAmount, lowerAmount, numAmount, uniqueAmount;
 	std::random_device random;
 	std::mt19937 generator(random());
-	std::uniform_int_distribution<int>numberDis(0,9);
-	std::uniform_int_distribution<int>lowerDis(0,25);
-	std::uniform_int_distribution<int>upperDis(0,25);
-	std::uniform_int_distribution<int>uniqueDis(0,31);
-	
-	
+	std::uniform_int_distribution<int> numberDis(0, 9);
+	std::uniform_int_distribution<int> lowerDis(0, 25);
+	std::uniform_int_distribution<int> upperDis(0, 25);
+	std::uniform_int_distribution<int>
+		uniqueDis(0, 31);
+
 	std::string numbersArr[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
 	std::string lowercaseArr[] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n",
-		"o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+								  "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
 	std::string uppercaseArr[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N",
-		"O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
+								  "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
 	std::string uniqueArr[] = {"!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".",
-		"/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"};
-	
+							   "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"};
+
 	prompts();
 
 	std::cout << "\nTOTAL NUMBERS: ";
@@ -45,63 +46,71 @@ int main() {
 	std::cin >> upperAmount;
 	std::cout << "\nTOTAL UNIQUE LETTERS: ";
 	std::cin >> uniqueAmount;
-	
-//	passLength = numAmount + lowerAmount + upperAmount + uniqueAmount;
-	
-	//randomally select a total number of characters from each category
-	//then fill them into one array
-	//then randomize that array again
-	
+
+	//	passLength = numAmount + lowerAmount + upperAmount + uniqueAmount;
+
+	// randomally select a total number of characters from each category
+	// then fill them into one array
+	// then randomize that array again
+
 	std::string numbersFinal[numAmount];
 	std::string lowercaseFinal[lowerAmount];
 	std::string uppercaseFinal[upperAmount];
 	std::string uniqueFinal[uniqueAmount];
 	std::string password = "";
-	
-	std::cout << "\n\nPASSWORD\n‾‾‾‾‾‾‾‾\n";
-	
-	//NUMBERS......................................................................................................................................
-	for (int i = 0; i < numAmount; i++) {
+
+	std::cout << "\nPASSWORD\n‾‾‾‾‾‾‾‾\n";
+
+	// NUMBERS......................................................................................................................................
+	for (int i = 0; i < numAmount; i++)
+	{
 		numbersFinal[i] = numbersArr[numberDis(generator)];
 		std::cout << numbersFinal[i];
-		if (i == numAmount - 1){
+		if (i == numAmount - 1)
+		{
 			std::cout << '-';
 		}
 	}
-	//UNQIUE........................................................................................................................................
-	for (int i = 0 ; i < uniqueAmount; i++){
+	// UNQIUE........................................................................................................................................
+	for (int i = 0; i < uniqueAmount; i++)
+	{
 		uniqueFinal[i] = uniqueArr[uniqueDis(generator)];
 		std::cout << uniqueFinal[i];
-		if (i == uniqueAmount - 1){
+		if (i == uniqueAmount - 1)
+		{
 			std::cout << '-';
 		}
 	}
-	//LOWERCASE....................................................................................................................................
-	for (int i = 0 ; i < lowerAmount; i++){
+	// LOWERCASE....................................................................................................................................
+	for (int i = 0; i < lowerAmount; i++)
+	{
 		lowercaseFinal[i] = lowercaseArr[lowerDis(generator)];
 		std::cout << lowercaseFinal[i];
-		if (i == lowerAmount - 1){
+		if (i == lowerAmount - 1)
+		{
 			std::cout << '-';
 		}
 	}
-	//UPPERCASE....................................................................................................................................
-	for (int i = 0; i < upperAmount; i++) {
+	// UPPERCASE....................................................................................................................................
+	for (int i = 0; i < upperAmount; i++)
+	{
 		uppercaseFinal[i] = uppercaseArr[upperDis(generator)];
 		std::cout << uppercaseFinal[i];
-		if (i == upperAmount - 1){
+		if (i == upperAmount - 1)
+		{
 			std::cout << '-';
 		}
-	
-	
-	
-		return(0);
+
+		std::cout << "\n"
+				  << std::endl;
+
+		return (0);
+	}
 }
 
-}
+void prompts()
+{
 
-
-void prompts() {
-	
 	std::cout << "\nWELCOME TO THE PASSWORD GENERATOR";
 	std::cout << "\n‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾";
 	std::cout << "\nTHIS PROGRAM WILL GENERATE A PSEUDO RANDOMALLY GENERATED PASSWORD BASED ON A CRITERIA YOU SET.";
@@ -112,30 +121,29 @@ void prompts() {
 	std::cout << "UPPERCASE LETTERS\nA B C D E F G H I J K L M N O P Q R S T U V W X Y Z\n\n";
 	std::cout << "SPECIAL CHARACTERS\n! \" # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \\ ] ^ _ ` { | } ~";
 	std::cout << "\n\nCRITERIA\n‾‾‾‾‾‾‾‾";
-	
 }
 
 /*
- 
+
  sogmas-pokqyf-wexWy6
- 
+
  Password Generator
  ! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z { | } ~
- 
+
  Natural Numbers
  0 1 2 3 4 5 6 7 8 9
- 
+
  Lowercase Letters
  a b c d e f g h i j k l m n o p q r s t u v w x y z
- 
+
  Uppercase Letters
  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
- 
+
  Special Characters:
  ! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _ ` { | } ~
- 
- 
- 
+
+
+
  IBM Password Guidelines
  Do not use your user ID as a password.
  Do not use it reversed, doubled, or otherwise modified.
@@ -149,17 +157,17 @@ void prompts() {
  Do use two words, separated by a number, as a password.
  Do use pronounceable passwords. They are easier to remember.
  Do not write passwords down. However, if you must write them down, place them in a physically secure place, such as a locked cabinet.
- 
+
  ASCII (American Standard Code for Information Interchange) is the most common format for text files in computers and on the Internet. In an ASCII file, each alphabetic, numeric, or special character is represented with a 7-bit binary number (a string of seven 0s or 1s).
- 
- 
+
+
  " \"world\""
- 
+
  WOULD YOU LIKE A DEFINITION OF "ASCII VALUE CHARACTER SETS"?
  ENTER YES OR NO:
  WOULD YOU LIKE A CONCEPT DEFINITION OF "PSEUDO RANDOMALLY GENERATED PASSWORD"?
  ENTER YES OR NO:
  WOULD YOU LIKE A COLLOQUIAL OR TECHNICAL DEFINITION OF PSEUDO RANDOMIZED PASSWORD GENERATION?
  ENTER YES OR NO:
- 
+
  */
