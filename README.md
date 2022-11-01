@@ -4,8 +4,16 @@ This program will generate a pseudo randomally generated password based on user 
 How to use this program:
 
 ```CLI
-$ make
-$ 
+
+$ gh repo clone MorganBergen/password-generator
+Cloning into 'password-generator'...
+remote: Enumerating objects: 37, done.
+remote: Counting objects: 100% (37/37), done.
+remote: Compressing objects: 100% (29/29), done.
+remote: Total 37 (delta 12), reused 23 (delta 7), pack-reused 0
+Receiving objects: 100% (37/37), 130.14 KiB | 2.17 MiB/s, done.
+Resolving deltas: 100% (12/12), done.
+
 ```
 
 ### Let's talk Probability
