@@ -1,7 +1,8 @@
-# password generator
-This program will generate a pseudo randomally generated password based on user set criteria.  The following outputs will comprise of ASCII standard value character set, with which the user's password will derive from.  
-
-### How to use this program:
+# 🔐 A Password Generator with integrity
+This program will generate a pseudo randomally generated password based on user set criteria.  The following outputs will comprise of ASCII standard value character set, with which the user's password will derive from.  What standard library functions are we driving our randomness from?  Well from yours truly...
+### `std::random_device random; std::mt19937 generator(random());`
+  
+## How to use this program:
 
 https://user-images.githubusercontent.com/65584733/199314126-6c69f4d0-7638-4f7e-bd85-3a7b2503ee7f.mov
 
@@ -21,8 +22,7 @@ $ make
 WELCOME....
 ```
 
-### What is the probability that my password will be successfully FOUND!?!?
-why are passwords important and how likely will your password given 8 char minimum take you in terms of someone else finding that string literal. 
-
+## What is the probability that my password will be successfully FOUND!?!?
+Why are passwords important and how likely will your password given 8 char minimum take you in terms of someone else finding that string literal. 
 
 ![asset-1](https://user-images.githubusercontent.com/65584733/199307722-8c5e8b89-2d19-46fd-8205-298fa7ce72e2.jpg)
