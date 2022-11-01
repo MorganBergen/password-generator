@@ -16,10 +16,9 @@ Resolving deltas: 100% (12/12), done.
 
 $ cd password-generator
 $ make
-...
+
 ```
 ### Demo of CLI application 
-
 
 
 
