@@ -3,6 +3,8 @@ This program will generate a pseudo randomally generated password based on user 
 
 ### How to use this program:
 
+https://user-images.githubusercontent.com/65584733/199314126-6c69f4d0-7638-4f7e-bd85-3a7b2503ee7f.mov
+
 ```CLI
 $ gh repo clone MorganBergen/password-generator
 
@@ -16,13 +18,10 @@ Resolving deltas: 100% (12/12), done.
 
 $ cd password-generator
 $ make
-
+WELCOME....
 ```
-### Demo of CLI application 
 
-
-
-### Let's talk Probability
+### What is the probability that my password will be successfully FOUND!?!?
 why are passwords important and how likely will your password given 8 char minimum take you in terms of someone else finding that code. 
 
 
