@@ -22,7 +22,7 @@ WELCOME....
 ```
 
 ### What is the probability that my password will be successfully FOUND!?!?
-why are passwords important and how likely will your password given 8 char minimum take you in terms of someone else finding that code. 
+why are passwords important and how likely will your password given 8 char minimum take you in terms of someone else finding that string literal. 
 
 
 ![asset-1](https://user-images.githubusercontent.com/65584733/199307722-8c5e8b89-2d19-46fd-8205-298fa7ce72e2.jpg)
